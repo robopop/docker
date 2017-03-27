@@ -13,7 +13,7 @@ If you run docker on a Linux system or as Docker for Mac, then the software will
 
 * [Belief System Admin](http://localhost:8888/beliefsystem-webadmin/)
 * [Mental World Admin](http://localhost:8888/mentalwold-webadmin/)
-* [Mental World web Application](http://localhost:8888/mentalwold-webapp/)
+* [Mental World Web Application](http://localhost:8888/mentalwold-webapp/)
 
 As well as a REST service for the belief system:
 
