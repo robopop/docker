@@ -4,19 +4,7 @@ set -e -x
 
 BIN="$(cd "$(dirname "$0")" ; pwd)"
 PROJECT="$(dirname "${BIN}")"
-
-function remove-container() {
-	local NAME="$1"
-	local RUNNING_FLAG="$(docker inspect --format '{{.State.Running}}' "${NAME}" 2>/dev/null || true)"
-	if [ -n "${RUNNING_FLAG}" ]
-	then
-       		if "${RUNNING_FLAG}"
-		then
-			docker stop "${NAME}"
-		fi
-		docker rm "${NAME}"
-	fi
-}
+ETC="${PROJECT}/etc"
 
 function try-sql() {
 	echo "$@" | docker exec -i 'epistemics-mysql' mysql -pwortel
@@ -25,9 +13,35 @@ function do-sql() {
 	try-sql "$@" || true
 }
 
-remove-container epistemics-mysql
+function check-not-empty() {
+    local VALUE="$(eval echo "\${$1}")"
+    if [ -z "${VALUE}" ]
+    then
+        echo "Missing value for: $1" >&2
+        exit 1
+    fi
+}
 
-docker run --name 'epistemics-mysql' -d --env MYSQL_ROOT_PASSWORD=wortel -v "$PROJECT/data/mysql:/var/lib/mysql" mysql:5.6
+"${BIN}/ensure-local.sh"
+. "${ETC}/settings-local.sh"
+. "${ETC}/credentials-local.sh"
+
+check-not-empty DB_USER
+check-not-empty DB_PASSWORD
+check-not-empty DB_ROOT_PASSWORD
+check-not-empty DB_SCHEMA
+
+sed \
+    -e "s/\\\${DB_USER}/${DB_USER}/" \
+    -e "s/\\\${DB_PASSWORD}/${DB_PASSWORD}/" \
+    -e "s/\\\${DB_ROOT_PASSWORD}/${DB_ROOT_PASSWORD}/" \
+    -e "s/\\\${DB_SCHEMA}/${DB_SCHEMA}/" \
+    "${ETC}/database-template.properties" \
+    > "${PROJECT}/data/selemca/database.properties"
+
+docker rm -f epistemics-mysql || true
+
+docker run --name 'epistemics-mysql' -d --env "MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}" -v "$PROJECT/data/mysql:/var/lib/mysql" mysql:5.6
 
 N=60
 while ! try-sql 'show databases;' && [ "${N}" -gt 0 ]
@@ -36,10 +50,10 @@ do
 	sleep 1
 done
 
-do-sql "CREATE USER 'selemca'@'localhost' IDENTIFIED BY 'selemca';"
-do-sql "CREATE USER 'selemca'@'%' IDENTIFIED BY 'selemca';"
-do-sql "CREATE DATABASE beliefsystem;"
-do-sql "GRANT ALL PRIVILEGES ON beliefsystem.* TO 'selemca'@'localhost';"
-do-sql "GRANT ALL PRIVILEGES ON beliefsystem.* TO 'selemca'@'%';"
+do-sql "CREATE USER '${DB_USER}'@'localhost' IDENTIFIED BY '${DB_PASSWORD}';"
+do-sql "CREATE USER '${DB_USER}'@'%' IDENTIFIED BY '${DB_PASSWORD}';"
+do-sql "CREATE DATABASE ${DB_SCHEMA};"
+do-sql "GRANT ALL PRIVILEGES ON ${DB_SCHEMA}.* TO '${DB_USER}'@'localhost';"
+do-sql "GRANT ALL PRIVILEGES ON ${DB_SCHEMA}.* TO '${DB_USER}'@'%';"
 do-sql "FLUSH PRIVILEGES;"
 do-sql "show databases;"

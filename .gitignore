@@ -1,2 +1,4 @@
+.idea
+*.iml
+/epistemics/etc/*-local.*
 /epistemics/data/mysql
-/epistemics/data/selemca/wordnet_2_0.rdf
