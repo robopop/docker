@@ -5,9 +5,9 @@ Scripts for running ROBOpop component Epistemics of the Virtual in docker contai
 
 Recommended steps:
 
-# Run `bin/ensure-local.sh`
-# Edit credentials in `etc/*-local.sh`
-# Run `bin/docker-run.sh`
+1. Run `bin/ensure-local.sh`
+2. Edit credentials in `etc/*-local.sh`
+3. Run `bin/docker-run.sh`
 
 If you run docker on a Linux system or as Docker for Mac then the software will be available at:
 
