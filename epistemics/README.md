@@ -9,11 +9,11 @@ Recommended steps:
 2. Edit credentials in `etc/*-local.sh`
 3. Run `bin/docker-run.sh`
 
-If you run docker on a Linux system or as Docker for Mac then the software will be available at:
+If you run docker on a Linux system or as Docker for Mac, then the software will be available at:
 
 * [Belief System Admin](http://localhost:8888/beliefsystem-webadmin/)
 * [Mental World Admin](http://localhost:8888/mentalwold-webadmin/)
-* [Mental World Admin](http://localhost:8888/mentalwold-webapp/)
+* [Mental World web Application](http://localhost:8888/mentalwold-webapp/)
 
 As well as a REST service for the belief system:
 

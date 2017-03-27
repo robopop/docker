@@ -13,15 +13,7 @@ function do-sql() {
 	try-sql "$@" || true
 }
 
-function check-not-empty() {
-    local VALUE="$(eval echo "\${$1}")"
-    if [ -z "${VALUE}" ]
-    then
-        echo "Missing value for: $1" >&2
-        exit 1
-    fi
-}
-
+. "${BIN}/lib.sh"
 "${BIN}/ensure-local.sh"
 . "${ETC}/settings-local.sh"
 . "${ETC}/credentials-local.sh"
