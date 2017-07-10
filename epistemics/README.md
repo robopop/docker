@@ -12,8 +12,8 @@ Recommended steps:
 If you run docker on a Linux system or as Docker for Mac, then the software will be available at:
 
 * [Belief System Admin](http://localhost:8888/beliefsystem-webadmin/)
-* [Mental World Admin](http://localhost:8888/mentalwold-webadmin/)
-* [Mental World Web Application](http://localhost:8888/mentalwold-webapp/)
+* [Mental World Admin](http://localhost:8888/mentalworld-webadmin/)
+* [Mental World Web Application](http://localhost:8888/mentalworld-webapp/)
 
 As well as a REST service for the belief system:
 
