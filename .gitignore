@@ -2,4 +2,5 @@
 *.iml
 /epistemics/etc/*-local.*
 /epistemics/data/mysql
-/stack/docker-compose.yml
+/epistemics/docker/*.war
+/robopop/docker-compose.yml
