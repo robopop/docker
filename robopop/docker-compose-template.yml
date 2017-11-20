@@ -26,7 +26,7 @@ services:
       placement:
         constraints: [node.role == manager]
   epistemics:
-    image: robopop/epistemics:1.3.0-snapshot
+    image: ${DOCKER_REPOSITORY}/epistemics:${EPISTEMICS_IMAGE_VERSION}
     networks:
       - robopop
     ports:
@@ -45,9 +45,12 @@ services:
       restart_policy:
         condition: on-failure
   silicon-coppelia:
-    image: robopop/silicon-coppelia
+    image: ${DOCKER_REPOSITORY}/silicon-coppelia:${SICO_IMAGE_VERSION}
     networks:
       - robopop
+    ports:
+      - target: 8080
+        published: ${SICO_SERVER_PORT}
   test-volume:
     image: busybox
     entrypoint:

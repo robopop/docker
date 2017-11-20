@@ -1,6 +1,6 @@
 .idea
 *.iml
-/epistemics/etc/*-local.*
+/**/etc/*-local.*
 /epistemics/data/mysql
 /epistemics/docker/*.war
 /robopop/docker-compose.yml

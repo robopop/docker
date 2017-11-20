@@ -12,11 +12,14 @@ export SED_EXT
 COMPOSE="$(cd "$(dirname "$0")" ; pwd)"
 DOCKER="$(dirname "${COMPOSE}")"
 EPISTEMICS="${DOCKER}/epistemics"
+SILICON_COPPELIA="${DOCKER}/sico"
 
 . "${DOCKER}/bin/verbose.sh"
 
+source "${COMPOSE}/etc/settings-local.sh"
 source "${EPISTEMICS}/etc/settings-local.sh"
 source "${EPISTEMICS}/etc/credentials-local.sh"
+source "${SILICON_COPPELIA}/etc/settings-local.sh"
 
 BASE="${COMPOSE}/docker-compose"
 TEMPLATE="${BASE}-template.yml"
