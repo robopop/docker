@@ -21,6 +21,8 @@ As well as a REST service for the belief system:
 
 * [Belief System REST service](http://localhost:8888/beliefsystem-rest/)
 
+If you run docker in a virtual machine, you may need to replace `localhost` by the name or IP address of the virtual machine.
+
 The belief system can be exported as a ZIP file using the Belief System Admin web application.
 [This sample file](https://github.com/robopop/epistemics/raw/master/Installation/BeliefSystem.zip)
 can be imported using the same web application.

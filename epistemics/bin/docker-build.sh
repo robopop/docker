@@ -12,7 +12,11 @@ if [ -n "${ARTIFACTORY_IP}" ]
 then
 	ARTIFACTORY_URL="http://${ARTIFACTORY_IP}:8081/artifactory/libs-release-local/selemca"
 fi
-LOCAL_REPO="${HOME}/.m2/repository"
+LOCAL_REPO="$(mvn help:evaluate -Dexpression=settings.localRepository 2>&1 | grep -v '^[[][A-Z]*[]] ' || true)"
+if [ -z "${LOCAL_REPO}" -o \! -d "${LOCAL_REPO}" ]
+then
+    LOCAL_REPO="${HOME}/.m2/repository"
+fi
 
 function download-artifact() {
 	local ARTIFACT_ID="$1"
@@ -38,5 +42,6 @@ function download-artifact() {
 	download-artifact "epistemics-mentalworld-webadmin/${VERSION}" "epistemics-mentalworld-webadmin-${VERSION}.war" "${VERSION}"
 	download-artifact "epistemics-mentalworld-rest/${VERSION}" "epistemics-mentalworld-rest-${VERSION}.war" "${VERSION}"
 
-	docker build -t jeroenvm/epistemics .
+    TAG_VERSION="$(echo "${VERSION}" | tr 'A-Z' 'a-z')"
+	docker build -t "jeroenvm/epistemics:${TAG_VERSION}" .
 )

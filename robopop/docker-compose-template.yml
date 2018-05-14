@@ -51,17 +51,6 @@ services:
     ports:
       - target: 8080
         published: ${SICO_SERVER_PORT}
-  test-volume:
-    image: busybox
-    entrypoint:
-      - /bin/sh
-      - -c
-      - while true ; do sleep 1 ; done
-    volumes:
-      -
-        type: volume
-        source: epistemics-config
-        target: /usr/local/selemca
 
 volumes:
   epistemics-data:
