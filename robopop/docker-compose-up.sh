@@ -14,6 +14,7 @@ DOCKER="$(dirname "${COMPOSE}")"
 EPISTEMICS="${DOCKER}/epistemics"
 SILICON_COPPELIA="${DOCKER}/sico"
 
+: ${SILENT:=true}
 . "${DOCKER}/bin/verbose.sh"
 
 source "${COMPOSE}/etc/settings-local.sh"
