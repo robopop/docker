@@ -45,12 +45,14 @@ services:
       restart_policy:
         condition: on-failure
   silicon-coppelia:
-    image: ${DOCKER_REPOSITORY}/silicon-coppelia:${SICO_IMAGE_VERSION}
+    image: ${DOCKER_REPOSITORY}/silicon-coppelia${SICO_SUFFIX}:${SICO_IMAGE_VERSION}
     networks:
       - robopop
     ports:
       - target: 8080
         published: ${SICO_SERVER_PORT}
+    environment:
+      - DISPLAY=${DISPLAY}
 
 volumes:
   epistemics-data:
