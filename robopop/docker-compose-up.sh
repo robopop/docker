@@ -62,4 +62,7 @@ do
 done
 "${SILENT}" || diff "${TEMPLATE}" "${TARGET}" || true
 
-docker-compose up
+(
+    cd "${COMPOSE}"
+    docker-compose up
+)
