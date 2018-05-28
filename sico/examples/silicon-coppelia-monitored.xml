@@ -1,0 +1,2011 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="silicon-coppelia-monitored" class="ptolemy.actor.TypedCompositeActor">
+    <property name="Encode" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="false">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{200.0, 250.0}">
+        </property>
+        <property name="width" class="ptolemy.data.expr.Parameter" value="170.0">
+        </property>
+        <property name="height" class="ptolemy.data.expr.Parameter" value="484.85294117647055">
+        </property>
+        <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+    </property>
+    <property name="Respond" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="false">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[720.0, 250.0]">
+        </property>
+        <property name="width" class="ptolemy.data.expr.Parameter" value="375.0">
+        </property>
+        <property name="height" class="ptolemy.data.expr.Parameter" value="490.0">
+        </property>
+        <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+    </property>
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="10.0.1_20141217">
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 23, 1436, 877}, maximized=true}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1202, 767]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.6250655479811221">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{899.9999999999999, 379.97008703859063}">
+    </property>
+    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="false">
+    </property>
+    <property name="SDF Director" class="ptolemy.domains.sdf.kernel.SDFDirector">
+        <property name="iterations" class="ptolemy.data.expr.Parameter" value="AUTO">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[30.0, 45.0]">
+        </property>
+    </property>
+    <property name="Compare" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="false">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 250.0]">
+        </property>
+        <property name="width" class="ptolemy.data.expr.Parameter" value="235.0">
+        </property>
+        <property name="height" class="ptolemy.data.expr.Parameter" value="490.0">
+        </property>
+        <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+    </property>
+    <entity name="Appraisal" class="org.bitbucket.marrs.sico.actor.lib.compare.Appraisal">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[440.0, 65.0]">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 23, 1436, 877}, maximized=true}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1202, 767]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.6230757634131225">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{327.20405383091145, 210.80078125000003}">
+        </property>
+        <port name="featuresInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Features"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[-16.5, 150.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="ethicsInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Ethics"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[-20.0, 0.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+        </port>
+        <port name="affordancesInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Affordances"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[-15.0, 350.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+        </port>
+        <port name="valenceOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Valence"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[585.0, 350.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="valenceOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Valence total"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[590.0, 425.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+        </port>
+        <port name="relevanceOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Relevance"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[585.0, 10.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="relevanceOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Relevance total"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[585.0, 85.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+        </port>
+        <port name="maxUtilityActionsOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Actions"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[585.0, 200.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <entity name="connector" class="org.bitbucket.marrs.sico.actor.lib.connect.FileAppraisalDataConnector">
+            <display name="Epistemics connector"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[93.5, 150.0]">
+            </property>
+            <port name="weightMatrixOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+            </port>
+            <port name="rowMappingOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+            </port>
+            <port name="featureToActionOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+            </port>
+            <port name="actionOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+            </port>
+            <port name="actionToGoalOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+            </port>
+            <port name="goalOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+            </port>
+        </entity>
+        <entity name="utility" class="org.bitbucket.marrs.sico.actor.lib.compare.Utility">
+            <display name="Utility"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[330.0, 200.0]">
+            </property>
+            <port name="featureToActionInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Feature - Actions"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="actionInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Actions"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="actionToGoalInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Action - Goals"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="goalInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Goals"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="transitionsOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Transitions"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="maxUtilityActionOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Max Utility Actions"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="actionTendenciesOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Action Tendencies"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="relevance" class="org.bitbucket.marrs.sico.actor.lib.compare.Relevance">
+            <display name="Relevance"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[455.0, 20.0]">
+            </property>
+            <port name="ethicsInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Ethics"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="actionTendenciesInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Action Tendencies"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="output" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="outputAggregate" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="weightMatrixInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Weight Matrix"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="rowMappingInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Row Mapping"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="valence" class="org.bitbucket.marrs.sico.actor.lib.compare.Valence">
+            <display name="Valence"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[455.0, 360.0]">
+            </property>
+            <port name="affordancesInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Affordances"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="output" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="outputAggregate" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="transitionsInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Transitions"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="maxUtilityActionInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Max Utility Actions"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+            </port>
+        </entity>
+        <relation name="_R6" class="ptolemy.actor.TypedIORelation">
+            <vertex name="vertex" value="[455.0, 200.0]">
+            </vertex>
+        </relation>
+    </entity>
+    <entity name="Similarity" class="org.bitbucket.marrs.sico.actor.lib.compare.Similarity">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[365.0, 160.0]">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 23, 1436, 877}, maximized=true}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1202, 767]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{551.0, 340.203125}">
+        </property>
+        <port name="featuresInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Features"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{25.0, 180.0}">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="ethicsInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Ethics"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[25.0, 120.625]">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="affordancesInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Affordances"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[25.0, 75.625]">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="aestheticsInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Aesthetics"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[25.0, 30.625]">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="epistemicsInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Epistemics"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[25.0, -9.375]">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="similarityOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Similarity"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[565.0, 110.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="similarityOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Similarity Total"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[565.0, 240.0]">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <entity name="featureSink" class="ptolemy.actor.lib.Discard">
+            <display name="Discard"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[100.0, 180.0]">
+            </property>
+        </entity>
+        <entity name="similarityDataConnector" class="org.bitbucket.marrs.sico.actor.lib.connect.FileSimilarityDataConnector">
+            <display name="Epistemics Connector"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[195.0, 180.0]">
+            </property>
+        </entity>
+        <entity name="selfEncoding" class="ptolemy.actor.TypedCompositeActor">
+            <display name="Encoding Self"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[265.0, 325.0]">
+            </property>
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={253, 133, 934, 634}, maximized=false}">
+            </property>
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
+            </property>
+            <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+            </property>
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{292.0, 217.013671875}">
+            </property>
+            <port name="featuresInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Features"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 200.0}">
+                </property>
+            </port>
+            <port name="ethicsOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Ethics"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[575.0, 10.0]">
+                </property>
+            </port>
+            <port name="ethicsOutputTotal" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Ethics total"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[575.0, 60.0]">
+                </property>
+            </port>
+            <port name="affordancesOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Affordances"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[580.0, 120.0]">
+                </property>
+            </port>
+            <port name="affordancesOutputTotal" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Affordances total"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[580.0, 170.0]">
+                </property>
+            </port>
+            <port name="aestheticsOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Aesthetics"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[580.0, 210.0]">
+                </property>
+            </port>
+            <port name="aestheticsOutputTotal" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Aesthetics total"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[580.0, 255.0]">
+                </property>
+            </port>
+            <port name="epistemicsOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Epistemics"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[580.0, 320.0]">
+                </property>
+            </port>
+            <port name="epistemicsOutputTotal" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Epistemics total"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[580.0, 380.0]">
+                </property>
+            </port>
+            <entity name="ethics" class="org.bitbucket.marrs.sico.actor.lib.encode.LookupDomainEncoder">
+                <display name="Ethics"/>
+                <property name="fileNameParameter" class="ptolemy.data.expr.Parameter" value="examples/lookup_example.json">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[225.0, 20.0]">
+                </property>
+            </entity>
+            <entity name="affordances" class="org.bitbucket.marrs.sico.actor.lib.encode.LookupDomainEncoder">
+                <display name="Affordances"/>
+                <property name="fileNameParameter" class="ptolemy.data.expr.Parameter" value="examples/lookup_example.json">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[225.0, 130.0]">
+                </property>
+            </entity>
+            <entity name="aesthetics" class="org.bitbucket.marrs.sico.actor.lib.encode.LookupDomainEncoder">
+                <display name="Aesthetics"/>
+                <property name="fileNameParameter" class="ptolemy.data.expr.Parameter" value="examples/lookup_example.json">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[230.0, 245.0]">
+                </property>
+            </entity>
+            <entity name="epistemics" class="org.bitbucket.marrs.sico.actor.lib.encode.LookupDomainEncoder">
+                <display name="Epistemics"/>
+                <property name="fileNameParameter" class="ptolemy.data.expr.Parameter" value="examples/lookup_example.json">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[235.0, 370.0]">
+                </property>
+            </entity>
+            <relation name="featureRelation" class="ptolemy.actor.TypedIORelation">
+                <vertex name="vertex" value="[80.0, 200.0]">
+                </vertex>
+            </relation>
+        </entity>
+        <entity name="similarityDistance" class="org.bitbucket.marrs.sico.actor.lib.compare.SimilarityDistance">
+            <display name="Similarity Distance"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[425.0, 180.0]">
+            </property>
+            <port name="ethicsInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Aesthetics Self"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="affordancesInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Affordances Self"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="aestheticsInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Aesthetics Self"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="epistemicsInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Epistemics Self"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="ethicsInputSelf" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="affordancesInputSelf" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="aestheticsInputSelf" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="epistemicsInputSelf" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="output" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="outputAggregate" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="similarityWeightInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Similarity Weights"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="dissimilarityWeightInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Dissimilarity Weights"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+    </entity>
+    <entity name="Engagement" class="org.bitbucket.marrs.sico.actor.lib.respond.Engagement">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[640.0, 360.0]">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 23, 1436, 877}, maximized=true}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1202, 767]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{601.0, 383.5}">
+        </property>
+        <port name="featuresInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Features"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[20.0, 380.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+        </port>
+        <port name="aestheticsInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Aesthetics"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[20.0, 570.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="epistemicsInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Epistemics"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[20.0, 620.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="affordancesInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Affordances"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[20.0, 520.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="relevanceInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Relevance"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[20.0, 250.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+        </port>
+        <port name="valenceInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Valence"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[20.0, 200.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+        </port>
+        <port name="similarityInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Similarity"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[20.0, 150.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+        </port>
+        <port name="engagementOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Engagement"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[605.0, 505.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="engagementOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Engagement total"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[605.0, 565.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="tradeoffOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Tradeoff"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[795.0, 335.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="tradeoffOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Tradeoff total"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[795.0, 410.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <entity name="featureSink" class="ptolemy.actor.lib.Discard">
+            <display name="Discard"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[100.0, 380.0]">
+            </property>
+        </entity>
+        <entity name="engagementConnector" class="org.bitbucket.marrs.sico.actor.lib.connect.FileLinearModelDataConnector">
+            <display name="Epistemics Connector"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[235.0, 380.0]">
+            </property>
+        </entity>
+        <entity name="engagement" class="org.bitbucket.marrs.sico.actor.lib.respond.LinearModelEngagement">
+            <display name="Engagement"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[395.0, 380.0]">
+            </property>
+            <port name="affordancesInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Affordances"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+            </port>
+            <port name="aestheticsInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Aesthetics"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+            </port>
+            <port name="epistemicsInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Epistemics"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+            </port>
+            <port name="relevanceInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Relevance"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+            </port>
+            <port name="valenceInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Valence"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+            </port>
+            <port name="similarityInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Similarity"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+            </port>
+            <port name="output" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="outputAggregate" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="weightMatrixInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Weight Matrix"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="rowMappingInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Row Mapping"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="idtConnector" class="org.bitbucket.marrs.sico.actor.lib.connect.FileWeightDataConnector">
+            <display name="Epistemics Connector"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, 220.0]">
+            </property>
+            <port name="weightMatrixOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+            </port>
+        </entity>
+        <entity name="tradeoff" class="org.bitbucket.marrs.sico.actor.lib.respond.IDT">
+            <display name="IDT"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, 370.0]">
+            </property>
+            <port name="engagementInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Engagement"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="output" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Tradeoff"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="outputAggregate" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Tradeoff total"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="weightInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Weight"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <relation name="_R11" class="ptolemy.actor.TypedIORelation">
+            <vertex name="vertex" value="[540.0, 370.0]">
+            </vertex>
+        </relation>
+    </entity>
+    <entity name="UseIntentions" class="org.bitbucket.marrs.sico.actor.lib.respond.UseIntentions">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[745.0, 265.0]">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 23, 1436, 877}, maximized=true}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1202, 767]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{543.0, 336.5}">
+        </property>
+        <port name="featuresInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Features"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[15.0, -5.0]">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+        </port>
+        <port name="aestheticsInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Aesthetics"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[15.0, 225.0]">
+            </property>
+        </port>
+        <port name="relevanceInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Relevance"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[50.0, 65.0]">
+            </property>
+        </port>
+        <port name="valenceInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Valence"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{15.0, 145.0}">
+            </property>
+        </port>
+        <port name="similarityInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Similarity"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[50.0, 295.0]">
+            </property>
+        </port>
+        <port name="useIntentionsOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Use Intentions"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[570.0, 140.0]">
+            </property>
+        </port>
+        <port name="useIntentionsOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Use Intentions total"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[570.0, 215.0]">
+            </property>
+        </port>
+        <entity name="featureSink" class="ptolemy.actor.lib.Discard">
+            <display name="Discard"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[250.0, -5.0]">
+            </property>
+        </entity>
+        <entity name="useIntentionsConnector" class="org.bitbucket.marrs.sico.actor.lib.connect.FileLinearModelDataConnector">
+            <display name="Epistemics Connector"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[380.0, 375.0]">
+            </property>
+            <port name="weightMatrixOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="false">
+                </property>
+            </port>
+            <port name="rowMappingOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="false">
+                </property>
+            </port>
+        </entity>
+        <entity name="useIntentions" class="org.bitbucket.marrs.sico.actor.lib.respond.LinearModelUseIntentions">
+            <display name="Use intentions"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[380.0, 180.0]">
+            </property>
+            <port name="rrelevanceInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Relevance"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="valenceInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Valence"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="aestheticsInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Aesthetics"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="similarityInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Similarity"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="output" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="outputAggregate" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="weightMatrixInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Weight Matrix"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="rowMappingInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Row Mapping"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+    </entity>
+    <entity name="Encoding" class="org.bitbucket.marrs.sico.actor.lib.encode.Encoding">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{215.0, 255.0}">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={50, 77, 934, 634}, maximized=false}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 500]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{350.0, 250.0}">
+        </property>
+        <port name="featuresInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Features"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[40.0, 260.0]">
+            </property>
+        </port>
+        <port name="ethicsOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Ethics"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[525.0, 400.0]">
+            </property>
+        </port>
+        <port name="ethicsOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Ethics total"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[525.0, 450.0]">
+            </property>
+        </port>
+        <port name="affordancesOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Affordances"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[525.0, 285.0]">
+            </property>
+        </port>
+        <port name="affordancesOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Affordances total"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[525.0, 345.0]">
+            </property>
+        </port>
+        <port name="aestheticsOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Aesthetics"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[530.0, 55.0]">
+            </property>
+        </port>
+        <port name="aestheticsOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Aesthetics total"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[530.0, 110.0]">
+            </property>
+        </port>
+        <port name="epistemicsOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Epistemics"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[525.0, 175.0]">
+            </property>
+        </port>
+        <port name="epistemicsOutputTotal" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Epistemics total"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[525.0, 235.0]">
+            </property>
+        </port>
+        <entity name="ethics" class="org.bitbucket.marrs.sico.actor.lib.encode.LookupDomainEncoder">
+            <display name="Ethics"/>
+            <property name="fileNameParameter" class="ptolemy.data.expr.Parameter" value="examples/lookup_example.json">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[260.0, 440.0]">
+            </property>
+        </entity>
+        <entity name="affordances" class="org.bitbucket.marrs.sico.actor.lib.encode.LookupDomainEncoder">
+            <display name="Affordances"/>
+            <property name="fileNameParameter" class="ptolemy.data.expr.Parameter" value="examples/lookup_example.json">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[320.0, 315.0]">
+            </property>
+        </entity>
+        <entity name="aesthetics" class="org.bitbucket.marrs.sico.actor.lib.encode.LookupDomainEncoder">
+            <display name="Aesthetics"/>
+            <property name="fileNameParameter" class="ptolemy.data.expr.Parameter" value="examples/lookup_example.json">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[270.0, 65.0]">
+            </property>
+        </entity>
+        <entity name="epistemics" class="org.bitbucket.marrs.sico.actor.lib.encode.LookupDomainEncoder">
+            <display name="Epistemics"/>
+            <property name="fileNameParameter" class="ptolemy.data.expr.Parameter" value="examples/lookup_example.json">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{320.0, 205.0}">
+            </property>
+        </entity>
+        <relation name="featureRelation" class="ptolemy.actor.TypedIORelation">
+            <vertex name="vertex" value="[115.0, 260.0]">
+            </vertex>
+        </relation>
+    </entity>
+    <entity name="Action" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1000.0, 370.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Feature Source" class="ptolemy.actor.TypedCompositeActor">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[45.0, 255.0]">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 23, 1436, 877}, maximized=true}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[783, 665]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.4562303557989695">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{44.04447645208111, 180.2502719785856}">
+        </property>
+        <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+            <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Features are collected into a map-like data structure as key-value pairs.&#10;The names are the port names of the RecordAssembler.&#10;&#10;The dummy implementation expects values between 0 and 1. The name&#10;can be prefixed with a 4-digit code to specify for which domain the value&#10;is encoded, e.g. 0101. The order for the domains is:&#10;&#10;Ethics, Affordances, Aesthetics, Epistemics">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[-210.0, 210.0]">
+            </property>
+        </property>
+        <port name="Features" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[200.0, 105.0]">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+        </port>
+        <entity name="Feature Assembler" class="ptolemy.actor.lib.RecordAssembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[25.0, 85.0]">
+            </property>
+            <port name="Weakness" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="Money" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="One" class="ptolemy.actor.lib.Const">
+            <doc>Create a constant sequence.</doc>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[-110.0, 40.0]">
+            </property>
+        </entity>
+        <entity name="Two" class="ptolemy.actor.lib.Const">
+            <property name="value" class="ptolemy.data.expr.Parameter" value="0.2">
+            </property>
+            <doc>Create a constant sequence.</doc>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[-110.0, 170.0]">
+            </property>
+        </entity>
+        <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <link port="Features" relation="relation3"/>
+        <link port="Feature Assembler.output" relation="relation3"/>
+        <link port="Feature Assembler.Weakness" relation="relation"/>
+        <link port="Feature Assembler.Money" relation="relation2"/>
+        <link port="One.output" relation="relation"/>
+        <link port="Two.output" relation="relation2"/>
+    </entity>
+    <entity name="AffectiveDecision" class="org.bitbucket.marrs.sico.actor.lib.respond.AffectiveDecision">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[830.0, 370.0]">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={48, 78, 934, 634}, maximized=false}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{350.0, 262.0}">
+        </property>
+        <port name="useIntentionsInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Use intentions"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[50.0, 160.0]">
+            </property>
+        </port>
+        <port name="tradeoffInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Tradeoff"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[51.5, 265.0]">
+            </property>
+        </port>
+        <port name="actionsInput" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <display name="Actions"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[51.5, 75.0]">
+            </property>
+        </port>
+        <port name="actionOutput" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <display name="Action"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[575.0, 210.0]">
+            </property>
+        </port>
+        <entity name="satisfactionConnector" class="org.bitbucket.marrs.sico.actor.lib.connect.FileWeightDataConnector">
+            <display name="Epistemics Connector"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[71.5, 365.0]">
+            </property>
+        </entity>
+        <entity name="satisfaction" class="org.bitbucket.marrs.sico.actor.lib.respond.Satisfaction">
+            <display name="Satisfaction"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[190.0, 220.0]">
+            </property>
+            <port name="weightInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="SOUTH">
+                </property>
+            </port>
+        </entity>
+        <entity name="decision" class="org.bitbucket.marrs.sico.actor.lib.respond.MaxSatisfactionDecision">
+            <display name="Decision"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[355.0, 210.0]">
+            </property>
+            <port name="satisfactionInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Satisfaction"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="actionInput" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <display name="Feature actions"/>
+                <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="actionOutput" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <display name="Action"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+    </entity>
+    <entity name="Features" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="45">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[105.0, 575.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
+            </property>
+        </port>
+    </entity>
+    <entity name="Ethics" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="100">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[805.0, 665.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Affordances" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="130">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[905.0, 720.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Aesthetics" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="100">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[805.0, 775.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Epistemics" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="100">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[805.0, 830.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Valence" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="130">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1145.0, -60.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Relevance" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="130">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1150.0, -125.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Similarity monitor" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[920.0, -190.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Valence total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="45">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[165.0, -75.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Relevance total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="45">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[165.0, -135.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Similarity total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="45">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[165.0, -195.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Use Intentions" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="130">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1415.0, 205.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Use Intentions total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="50">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1150.0, 275.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Tradeoff monitor" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1110.0, 445.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Tradeoff total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1110.0, 505.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Ethics total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="50">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 660.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Affordances total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="50">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 710.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Aesthetics total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="50">
+            <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+            </property>
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 765.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Epistemics total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="50">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 825.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="EAST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Involvement/Distance" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="70">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1205.0, 560.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Involvement/Distance total" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1110.0, 615.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <entity name="Max Utility Actions" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="50">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1155.2704162597656, 74.6887092590332]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="WEST">
+            </property>
+        </port>
+    </entity>
+    <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[430.0, 245.0]">
+        </vertex>
+    </relation>
+    <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[630.0, 65.0]">
+        </vertex>
+    </relation>
+    <relation name="relation17" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[650.0, 160.0]">
+        </vertex>
+    </relation>
+    <relation name="relation11" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[640.0, 55.0]">
+        </vertex>
+    </relation>
+    <relation name="relation20" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="[755.0, 160.0]">
+        </vertex>
+    </relation>
+    <relation name="relation12" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[105.0, 255.0]">
+        </vertex>
+    </relation>
+    <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[450.0, 370.0]">
+        </vertex>
+    </relation>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[105.0, 100.0]">
+        </vertex>
+    </relation>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[105.0, 440.0]">
+        </vertex>
+    </relation>
+    <relation name="relation15" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[375.0, 265.0]">
+        </vertex>
+    </relation>
+    <relation name="relation10" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[385.0, 360.0]">
+        </vertex>
+    </relation>
+    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation16" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation18" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation14" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[820.0, 255.0]">
+        </vertex>
+    </relation>
+    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation22" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[755.0, 505.0]">
+        </vertex>
+    </relation>
+    <relation name="relation21" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[430.0, 550.0]">
+        </vertex>
+    </relation>
+    <relation name="relation23" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[450.0, 565.0]">
+        </vertex>
+    </relation>
+    <relation name="relation24" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[375.0, 580.0]">
+        </vertex>
+    </relation>
+    <relation name="relation25" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[385.0, 595.0]">
+        </vertex>
+    </relation>
+    <relation name="relation26" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="[315.0, 180.0]">
+        </vertex>
+    </relation>
+    <relation name="relation27" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="[315.0, 190.0]">
+        </vertex>
+    </relation>
+    <relation name="relation28" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="[315.0, 200.0]">
+        </vertex>
+    </relation>
+    <relation name="relation29" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="[315.0, 210.0]">
+        </vertex>
+    </relation>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[760.0, 370.0]">
+        </vertex>
+    </relation>
+    <relation name="relation19" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[760.0, 445.0]">
+        </vertex>
+    </relation>
+    <relation name="relation32" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[770.0, 560.0]">
+        </vertex>
+    </relation>
+    <relation name="relation30" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[765.0, 615.0]">
+        </vertex>
+    </relation>
+    <relation name="relation9" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation31" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[345.0, 245.0]">
+        </vertex>
+    </relation>
+    <relation name="relation33" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[355.0, 370.0]">
+        </vertex>
+    </relation>
+    <relation name="relation34" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[735.0, 65.0]">
+        </vertex>
+    </relation>
+    <relation name="relation35" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[745.0, 55.0]">
+        </vertex>
+    </relation>
+    <relation name="relation37" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[840.0, 75.0]">
+        </vertex>
+    </relation>
+    <relation name="relation13" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[550.0, 265.0]">
+        </vertex>
+    </relation>
+    <relation name="relation36" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[640.0, 440.0]">
+        </vertex>
+    </relation>
+    <relation name="relation38" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="[745.0, 440.0]">
+        </vertex>
+    </relation>
+    <link port="Appraisal.featuresInput" relation="relation4"/>
+    <link port="Appraisal.ethicsInput" relation="relation8"/>
+    <link port="Appraisal.affordancesInput" relation="relation3"/>
+    <link port="Appraisal.valenceOutput" relation="relation11"/>
+    <link port="Appraisal.valenceOutputTotal" relation="relation18"/>
+    <link port="Appraisal.relevanceOutput" relation="relation6"/>
+    <link port="Appraisal.relevanceOutputTotal" relation="relation16"/>
+    <link port="Appraisal.maxUtilityActionsOutput" relation="relation37"/>
+    <link port="Similarity.featuresInput" relation="relation4"/>
+    <link port="Similarity.ethicsInput" relation="relation31"/>
+    <link port="Similarity.affordancesInput" relation="relation33"/>
+    <link port="Similarity.aestheticsInput" relation="relation15"/>
+    <link port="Similarity.epistemicsInput" relation="relation10"/>
+    <link port="Similarity.similarityOutput" relation="relation17"/>
+    <link port="Similarity.similarityOutputTotal" relation="relation7"/>
+    <link port="Engagement.featuresInput" relation="relation36"/>
+    <link port="Engagement.aestheticsInput" relation="relation13"/>
+    <link port="Engagement.epistemicsInput" relation="relation10"/>
+    <link port="Engagement.affordancesInput" relation="relation3"/>
+    <link port="Engagement.relevanceInput" relation="relation6"/>
+    <link port="Engagement.valenceInput" relation="relation11"/>
+    <link port="Engagement.similarityInput" relation="relation17"/>
+    <link port="Engagement.engagementOutput" relation="relation32"/>
+    <link port="Engagement.engagementOutputTotal" relation="relation30"/>
+    <link port="Engagement.tradeoffOutput" relation="relation"/>
+    <link port="Engagement.tradeoffOutputTotal" relation="relation22"/>
+    <link port="UseIntentions.featuresInput" relation="relation38"/>
+    <link port="UseIntentions.aestheticsInput" relation="relation13"/>
+    <link port="UseIntentions.relevanceInput" relation="relation34"/>
+    <link port="UseIntentions.valenceInput" relation="relation35"/>
+    <link port="UseIntentions.similarityInput" relation="relation20"/>
+    <link port="UseIntentions.useIntentionsOutput" relation="relation14"/>
+    <link port="UseIntentions.useIntentionsOutputTotal" relation="relation5"/>
+    <link port="Encoding.featuresInput" relation="relation12"/>
+    <link port="Encoding.ethicsOutput" relation="relation31"/>
+    <link port="Encoding.ethicsOutputTotal" relation="relation26"/>
+    <link port="Encoding.affordancesOutput" relation="relation33"/>
+    <link port="Encoding.affordancesOutputTotal" relation="relation27"/>
+    <link port="Encoding.aestheticsOutput" relation="relation15"/>
+    <link port="Encoding.aestheticsOutputTotal" relation="relation28"/>
+    <link port="Encoding.epistemicsOutput" relation="relation10"/>
+    <link port="Encoding.epistemicsOutputTotal" relation="relation29"/>
+    <link port="Action.input" relation="relation9"/>
+    <link port="Feature Source.Features" relation="relation12"/>
+    <link port="AffectiveDecision.useIntentionsInput" relation="relation14"/>
+    <link port="AffectiveDecision.tradeoffInput" relation="relation"/>
+    <link port="AffectiveDecision.actionsInput" relation="relation37"/>
+    <link port="AffectiveDecision.actionOutput" relation="relation9"/>
+    <link port="Features.input" relation="relation2"/>
+    <link port="Ethics.input" relation="relation21"/>
+    <link port="Affordances.input" relation="relation23"/>
+    <link port="Aesthetics.input" relation="relation24"/>
+    <link port="Epistemics.input" relation="relation25"/>
+    <link port="Valence.input" relation="relation11"/>
+    <link port="Relevance.input" relation="relation6"/>
+    <link port="Similarity monitor.input" relation="relation17"/>
+    <link port="Valence total.input" relation="relation18"/>
+    <link port="Relevance total.input" relation="relation16"/>
+    <link port="Similarity total.input" relation="relation7"/>
+    <link port="Use Intentions.input" relation="relation14"/>
+    <link port="Use Intentions total.input" relation="relation5"/>
+    <link port="Tradeoff monitor.input" relation="relation19"/>
+    <link port="Tradeoff total.input" relation="relation22"/>
+    <link port="Ethics total.input" relation="relation26"/>
+    <link port="Affordances total.input" relation="relation27"/>
+    <link port="Aesthetics total.input" relation="relation28"/>
+    <link port="Epistemics total.input" relation="relation29"/>
+    <link port="Involvement/Distance.input" relation="relation32"/>
+    <link port="Involvement/Distance total.input" relation="relation30"/>
+    <link port="Max Utility Actions.input" relation="relation37"/>
+    <link relation1="relation8" relation2="relation21"/>
+    <link relation1="relation8" relation2="relation31"/>
+    <link relation1="relation6" relation2="relation34"/>
+    <link relation1="relation17" relation2="relation20"/>
+    <link relation1="relation11" relation2="relation35"/>
+    <link relation1="relation12" relation2="relation4"/>
+    <link relation1="relation12" relation2="relation2"/>
+    <link relation1="relation3" relation2="relation23"/>
+    <link relation1="relation3" relation2="relation33"/>
+    <link relation1="relation2" relation2="relation36"/>
+    <link relation1="relation15" relation2="relation24"/>
+    <link relation1="relation15" relation2="relation13"/>
+    <link relation1="relation10" relation2="relation25"/>
+    <link relation1="relation" relation2="relation19"/>
+    <link relation1="relation36" relation2="relation38"/>
+</entity>
