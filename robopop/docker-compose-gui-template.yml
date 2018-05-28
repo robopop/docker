@@ -49,10 +49,12 @@ services:
     networks:
       - robopop
     ports:
-      - target: 8080
+      - target: 8078
         published: ${SICO_SERVER_PORT}
     environment:
       - DISPLAY=${DISPLAY}
+      - SICO_DATA_SOURCE=SELEMCA
+      - SICO_EPISTEMICS_URL=http://epistemics:8080/beliefsystem-rest/epistemics
     volumes:
       -
         type: bind
