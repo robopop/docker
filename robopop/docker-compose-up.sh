@@ -11,6 +11,7 @@ export SED_EXT
 
 COMPOSE="$(cd "$(dirname "$0")" ; pwd)"
 DOCKER="$(dirname "${COMPOSE}")"
+DOCKER_REPOSITORY='robopop'
 EPISTEMICS="${DOCKER}/epistemics"
 SILICON_COPPELIA="${DOCKER}/sico"
 
@@ -41,7 +42,7 @@ then
     shift 2
 fi
 : ${SICO_EXAMPLES:=../sico/examples}
-SICO_DIST="$(docker run --rm jeroenvm/silicon-coppelia-gui:latest /bin/pwd)"
+SICO_DIST="$(docker run --rm "${DOCKER_REPOSITORY}/silicon-coppelia-gui:latest" /bin/pwd)"
 
 VOLUMES=''
 if [ -n "${EXTRA_VOLUMES}" ]
