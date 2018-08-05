@@ -17,6 +17,7 @@ SILICON_COPPELIA="${DOCKER}/sico"
 : ${SILENT:=true}
 . "${DOCKER}/bin/verbose.sh"
 
+: ${EXTRA_VOLUMES:=}
 source "${COMPOSE}/etc/settings-local.sh"
 source "${EPISTEMICS}/etc/settings-local.sh"
 source "${EPISTEMICS}/etc/credentials-local.sh"
@@ -41,13 +42,21 @@ then
 fi
 : ${SICO_EXAMPLES:=../sico/examples}
 SICO_DIST="$(docker run --rm jeroenvm/silicon-coppelia-gui:latest /bin/pwd)"
+
+VOLUMES=''
+if [ -n "${EXTRA_VOLUMES}" ]
+then
+    VOLUMES="
+    volumes:${EXTRA_VOLUMES}"
+fi
+
 BASE="${COMPOSE}/docker-compose"
-TEMPLATE="${BASE}${SICO_SUFFIX}-template.yml"
+TEMPLATE="${BASE}-template.yml"
 TARGET="${BASE}.yml"
 VARIABLES="$(tr '$\012' '\012$' < "${TEMPLATE}" | sed -e '/^[{][A-Za-z_][A-Za-z0-9_]*[}]/!d' -e 's/^[{]//' -e 's/[}].*//')"
 
 function re-protect() {
-    sed "${SED_EXT}" -e 's/([[]|[]]|[|*?^$()/])/\\\1/g'
+    sed "${SED_EXT}" -e 's/([[]|[]]|[|*?^$()/])/\\\1/g' -e 's/$/\\/g' -e '$s/\\$//'
 }
 
 function substitute() {
