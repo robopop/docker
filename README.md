@@ -26,3 +26,6 @@ If you run docker in a virtual machine, you may need to replace `localhost` by t
 The belief system can be exported as a ZIP file using the Belief System Admin web application.
 [This sample file](https://github.com/robopop/epistemics/raw/master/Installation/BeliefSystem.zip)
 can be imported using the same web application.
+
+The primary way to experiment with these software components is with the Ptolemy framework.
+See the [Project Wiki](https://github.com/robopop/docker/wiki) for more information.
