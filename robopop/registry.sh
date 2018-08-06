@@ -29,7 +29,7 @@ IMG_SICO="silicon-coppelia:${SICO_IMAGE_VERSION}"
 IMG_SICO_GUI="silicon-coppelia-gui:${SICO_IMAGE_VERSION}"
 
 function glob-to-basic-re() {
-    echo "$@" | sed "${SED_EXT}" -e 's/([.^$\\])/\\\1/' -e 's/[?]/./' -e 's/[*]/.*/' -e 's/^/^/' -e 's/$/$/'
+    echo "$@" | sed "${SED_EXT}" -e 's/([.^$\\])/\\\1/g' -e 's/[?]/./g' -e 's/[*]/.*/g' -e 's/^/^/' -e 's/$/$/'
 }
 
 REMOTE_REPOSITORY="${DOCKER_REPOSITORY}"
