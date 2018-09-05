@@ -5,10 +5,12 @@ Scripts for running ROBOpop components in docker containers using docker-compose
 
 Recommended steps:
 
-1. Run `bin/create-local-settings.sh`
-2. Edit credentials in `epistemics/etc/credentials-local.sh`
-3. Change to directory `robopop`
-4. Run `./docker-compose-up.sh`
+1. Clone this repository locally
+2. If you haven't used docker compose before, run `docker swarm init`
+3. Run `bin/create-local-settings.sh`
+4. Edit credentials in `epistemics/etc/credentials-local.sh`
+5. Change to directory `robopop`
+6. Run `./docker-compose-up.sh`
 
 If you run docker on a Linux system or as Docker for Mac, then the software will be available at:
 
