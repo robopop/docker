@@ -1,5 +1,3 @@
-Docker orchestration of ROBOpop components
-==========================================
 # Docker orchestration of ROBOpop components
 
 Scripts for running ROBOpop components in docker containers using docker-compose / docker swarm mode.
