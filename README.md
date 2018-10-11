@@ -13,6 +13,7 @@ See [Wiki](https://github.com/robopop/docker/wiki/Ptolemy-GUI) for explanation
 2. If you haven't used docker compose before, run `docker swarm init`
 3. Run `bin/create-local-settings.sh`
 4. Edit credentials in `epistemics/etc/credentials-local.sh`
+5. Run `docker/prepare-volume.sh` to put default configuration files for the Epistemics component in a Docker volume.
 
 ## Running
 1. Change to directory `robopop`
