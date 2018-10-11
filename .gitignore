@@ -4,3 +4,4 @@
 /epistemics/data/mysql
 /epistemics/docker/*.war
 /robopop/docker-compose.yml
+/data/tmp/**
